@@ -1,0 +1,6 @@
+3 apis:
+* Extract{e}.GetT() / GetV() / GetA(attr) IsVisible() ..etc
+* EnsureText(e) / EnsureAttr(e)  ..etc
+* AssertTextEq(e, expected) / AssertAttrEq(e, attr, expected)  ..etc
+
+where `e` typically is agouti.Selection or MultiSelection
