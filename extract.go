@@ -3,6 +3,7 @@ package element
 type elementData interface {
 	Text() (string, error)
 	Attribute(string) (string, error)
+	Count() (int, error)
 	Enabled() (bool, error)
 	Visible() (bool, error)
 }
@@ -31,6 +32,22 @@ func (e Extract) GetA(attr string) string {
 		Die("extract attr error:: %v", err)
 	}
 	return v
+}
+
+func (e Extract) GetCount() int {
+	n, err := e.Count()
+	if err != nil {
+		die("extract count error: %s", err)
+	}
+	return n
+}
+
+func (e Extract) IsEnabled() bool {
+	ok, err := e.Enabled()
+	if err != nil {
+		Die("extract isEnabled error: %v", err)
+	}
+	return ok
 }
 
 func (e Extract) IsVisible() bool {
