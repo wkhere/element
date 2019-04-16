@@ -10,6 +10,10 @@ func EnsureAttr(container ElementData, attr string) string {
 	return Extract{container}.GetA(attr)
 }
 
+func EnsureCount(container ElementData) int {
+	return Extract{container}.GetCount()
+}
+
 func EnsureVisible(container ElementData) bool {
 	return Extract{container}.IsVisible()
 }
