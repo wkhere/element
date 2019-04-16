@@ -8,12 +8,12 @@ func AssertEq(v, expected interface{}) {
 	}
 }
 
-func AssertTextEq(container elementData, expected string) {
+func AssertTextEq(container ElementData, expected string) {
 	s := EnsureText(container)
 	AssertEq(s, expected)
 }
 
-func AssertAttrEq(container elementData, attr string, expected string) {
+func AssertAttrEq(container ElementData, attr string, expected string) {
 	v := EnsureAttr(container, attr)
 	AssertEq(v, expected)
 }
@@ -30,10 +30,10 @@ func AssertNotMatch(v string, re *regexp.Regexp) {
 	}
 }
 
-func AssertTextMatch(container elementData, re *regexp.Regexp) {
+func AssertTextMatch(container ElementData, re *regexp.Regexp) {
 	AssertMatch(EnsureText(container), re)
 }
 
-func AssertTextNotMatch(container elementData, re *regexp.Regexp) {
+func AssertTextNotMatch(container ElementData, re *regexp.Regexp) {
 	AssertNotMatch(EnsureText(container), re)
 }

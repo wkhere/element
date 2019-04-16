@@ -1,6 +1,6 @@
 package element
 
-type elementData interface {
+type ElementData interface {
 	Text() (string, error)
 	Attribute(string) (string, error)
 	Count() (int, error)
@@ -8,7 +8,7 @@ type elementData interface {
 	Visible() (bool, error)
 }
 
-type Extract struct{ elementData }
+type Extract struct{ ElementData }
 
 func (e Extract) GetT() string {
 	text, err := e.Text()

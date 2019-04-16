@@ -2,15 +2,15 @@ package element
 
 import "regexp"
 
-func EnsureText(container elementData) string {
+func EnsureText(container ElementData) string {
 	return Extract{container}.GetT()
 }
 
-func EnsureAttr(container elementData, attr string) string {
+func EnsureAttr(container ElementData, attr string) string {
 	return Extract{container}.GetA(attr)
 }
 
-func EnsureVisible(container elementData) bool {
+func EnsureVisible(container ElementData) bool {
 	return Extract{container}.IsVisible()
 }
 
