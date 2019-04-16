@@ -4,12 +4,12 @@ import (
 	"fmt"
 )
 
-var Die func(a ...interface{})
+var Die func(format string, a ...interface{})
 
 func init() {
 	Die = die
 }
 
-func die(a ...interface{}) {
+func die(format string, a ...interface{}) {
 	panic(fmt.Sprint(a...))
 }
