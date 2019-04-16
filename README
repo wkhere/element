@@ -1,5 +1,5 @@
 3 apis:
-* Extract{e}.GetT() / GetV() / GetA(attr) IsVisible() ..etc
+* Extract{e}.GetT() / GetV() / GetA(attr) / GetCount() / IsVisible() ..etc
 * EnsureText(e) / EnsureAttr(e)  ..etc
 * AssertTextEq(e, expected) / AssertAttrEq(e, attr, expected)  ..etc
 
