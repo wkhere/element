@@ -37,7 +37,7 @@ func (e Extract) GetA(attr string) string {
 func (e Extract) GetCount() int {
 	n, err := e.Count()
 	if err != nil {
-		die("extract count error: %s", err)
+		Die("extract count error: %s", err)
 	}
 	return n
 }

@@ -4,7 +4,7 @@ import "regexp"
 
 func AssertEq(v, expected interface{}) {
 	if expected != v {
-		die("expected `%v` got `%v`", expected, v)
+		Die("expected `%v` got `%v`", expected, v)
 	}
 }
 
