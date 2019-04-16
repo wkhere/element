@@ -7,9 +7,7 @@ type elementData interface {
 	Visible() (bool, error)
 }
 
-type Extract struct {
-	elementData
-}
+type Extract struct{ elementData }
 
 func (e Extract) GetT() string {
 	text, err := e.Text()
